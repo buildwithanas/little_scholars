@@ -6,7 +6,7 @@
   <title>Little Scholars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/index.css">
   <link rel="icon" type="images/jpeg" href="assets/images/logo.png.jpeg">
 </head>
 <body>
@@ -42,27 +42,96 @@
 </nav>
 
 
+<section class="hero">
+    <img src="assets/images/2.jpeg" alt="Little Scholar Hero">
 
-  
-  <div class="hero">
-    <img src="assets/images/1.jpeg" alt="little scholar hero bg" style="width: 1500px;">
     <div class="hero-content">
-      <h1>Welcome to Little Scholars</h1>
-      <h3>Building Bright Futures Through Quality Education</h3>
-      <p>We provide a safe, caring, and inspiring learning environment where children grow academically, socially, morally, and creatively.</p>
-      <br>
-      <div class="cta-btm">
-      <button href="contact.html">Apply Now</button>
-      <button href="about.html">Learn More</button>
-      </div>
+        <h1>Welcome to Little Scholars</h1>
+        <h3>Building Bright Futures Through Quality Education</h3>
+
+        <p>
+            We provide a safe, caring, and inspiring learning environment where
+            children grow academically, socially, morally, and creatively.
+        </p>
+
+        <div class="cta-btn">
+            <a href="contact.html" class="btn">Apply Now</a>
+            <a href="about.html" class="btn">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-number">400+</span>
+    <span class="stat-label">pupils</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">20+</span>
+    <span class="stat-label">Qualified Teachers</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">15+</span>
+    <span class="stat-label">Years of Excellence</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">100%</span>
+    <span class="stat-label">Quality Education</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">100%</span>
+    <span class="stat-label">Quality Education</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number">100%</span>
+    <span class="stat-label">Quality Education</span>
+  </div>
+</div>
+
+<!--About heading-->
+<div class="about-text">
+  <h3>About Us</h3>
+</div>
+
+
+
+<div class="about">
+  <div class="about-img-wrapper">
+    <img src="assets/images/3.jpeg" alt="Little Scholars About" class="about-img">
+  </div>
+  <div class="about-content">
+    <p>Little Scholar Islamic School was established in 2005 and officially registered and approved by the relevant authorities in 2010. The school currently operates two academic sessions, catering to both Nursery and Primary levels.</p><br>
+    <br>
+
+    <p>In 2015, the Primary section was relocated to its permanent site, marking a significant milestone in the school's growth. Over the years, the school has actively participated in various extracurricular activities, and by the grace of Allah (Alhamdulilah), has consistently achieved notable success and recognition.</p>
+    <div class="cta-btn1">
+    <a href="about.html" class="btn">Read More</a>
     </div>
   </div>
+</div>
 
 
+<script>
+  const counters = document.querySelectorAll('.counter');
 
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const speed = target / 60; // Change speed here
 
+    if (count < target) {
+      counter.innerText = Math.ceil(count + speed);
+      setTimeout(updateCount, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
 
+  updateCount();
+});
 
+</script>
 
 
 
