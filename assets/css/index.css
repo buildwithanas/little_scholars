@@ -425,3 +425,91 @@ nav ul a:focus-visible::after {
     font-size: 14px;
   }
 }
+/* Container layout */
+.choose-card {
+  display: grid;
+  /* Automatically adjusts column count; minimum size 280px per card */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual card styling */
+.choose-c1 {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card hover animation */
+.choose-c1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography styles */
+.choose-text {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.choose-text h3 {
+  font-size: 2rem;
+  color: #57381a;
+  margin: 0;
+}
+
+.choose-head {
+  font-size: 1.25rem;
+  color: #57381a;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.choose-p {
+  font-size: 0.95rem;
+  color: #57381a;
+  line-height: 1.6;
+  margin: 0;
+}
+/*CADEMICS SECTION*/
+
+.academics-text {
+  padding-left: 200px;
+  margin-right: 200px;
+  line-height: 1.8;
+}
+
+.academics-text h3 {
+  text-align: center;
+  margin-bottom: 13px;
+  color: #462a0e;
+  font-weight: 700;
+  font-size: 20px;
+}
+.academics-text p {
+  color: #57381a;
+  font-size: 0.95rem;
+}
+@media (max-width: 768px) {
+  .academics-text { 
+    margin-left: 10px; 
+    padding: 0 10px; /* Adds clean breathing room on sides */
+    margin-right: 10px;
+  } 
+  
+  .academics-text h3 { 
+    margin-left: 0; /* Resets the negative pull */
+  } 
+  
+  .academics-text p { 
+    margin-left: 0; /* Resets the negative pull */
+    max-width: 100%; /* Prevents text from stretching indefinitely */
+  } 
+}
