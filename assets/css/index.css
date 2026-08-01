@@ -131,6 +131,23 @@ nav ul a:focus-visible::after {
   width: 100%;
 }
 
+/* Login button treatment (spec asks for Login as a button, not a plain link) */
+nav ul a.nav-login-btn {
+  background: #85592e;
+  padding: 8px 18px;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+nav ul a.nav-login-btn::after {
+  display: none;
+}
+
+nav ul a.nav-login-btn:hover {
+  background: #91520a;
+  color: #ffffff;
+}
+
 @media (max-width: 960px) {
   .nav-toggle { display: flex; }
 
@@ -162,6 +179,10 @@ nav ul a:focus-visible::after {
     width: 100%;
     padding: 16px 24px;
     border-top: 1px solid rgba(233, 182, 13, 0.08);
+  }
+
+  nav ul a.nav-login-btn {
+    border-radius: 0;
   }
 }
 
@@ -195,19 +216,26 @@ nav ul a:focus-visible::after {
   width: 90%;
   max-width: 1000px;
 }
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 40px;
+
+.hero-eyebrow {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f0c987;
+  margin-bottom: 14px;
 }
-.hero-content h3 {
-  font-size: 1.5rem;
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
   margin-bottom: 30px;
 }
 .hero-content p {
   font-size: 1.1rem;
   font-weight: 100;
   line-height: 28px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 
@@ -231,22 +259,20 @@ nav ul a:focus-visible::after {
     max-width: 100%;
   }
 
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
   .hero-content h1 {
     font-size: 1.6rem;
     margin-bottom: 20px;
   }
 
-  .hero-content h3 {
-    font-size: 0.95rem;
-    margin-bottom: 18px;
-    font-weight: 300;
-    line-height: 20px;
-  }
-
   .hero-content p {
     font-size: 0.67rem;
     line-height: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
 }
 /*cta-btn*/
@@ -286,7 +312,7 @@ nav ul a:focus-visible::after {
 }
 
 /* ============================================
-   STATS BAR
+   STATS BAR (4 cards)
    ============================================ */
 .stats-bar {
   display: flex;
@@ -303,12 +329,16 @@ nav ul a:focus-visible::after {
 
 .stat-item {
   flex: 1 1 140px;
-  padding: 10px 8px;
+  padding: 18px 8px;
   text-align: center;
   border-right: 1px solid #f5f1ac;
-  border-bottom: 1px solid #f5f1ac;
 }
 
+.stat-icon {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
 
 
 .stat-item:last-child { border-right: none; }
@@ -328,14 +358,14 @@ nav ul a:focus-visible::after {
 
 @media (max-width: 600px) {
   .stat-item {
-    flex: 1 1 35%;
-    border-right: none;
+    flex: 1 1 50%;
+    border-bottom: 1px solid #f5f1ac;
   }
   .stat-item {
-    padding: 4px 4px;
+    padding: 12px 4px;
   }
   .stat-number {
-    font-size: 10px;
+    font-size: 16px;
   }
   .stat-item:nth-child(odd) {
     border-right: 1px solid #f5f1ac;
@@ -514,6 +544,72 @@ nav ul a:focus-visible::after {
   } 
 }
 
+/* ============================================
+   ACADEMIC LEVEL CARDS (Nursery / Primary)
+   ============================================ */
+.levels-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  padding: 24px 16px 8px;
+  margin: 0 auto;
+}
+
+.level-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+              0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.level-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.level-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.level-card-body {
+  padding: 20px;
+}
+
+.level-card-body h3 {
+  color: #462a0e;
+  margin-bottom: 8px;
+}
+
+.level-card-body p {
+  color: #57381a;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 2px solid #85592e;
+  color: #85592e;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background-color: #85592e;
+  color: #ffffff;
+}
+
 
 /* OUR FACILITIES  */
 
@@ -566,11 +662,123 @@ nav ul a:focus-visible::after {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
-@media {
+@media (max-width: 768px) {
   .facilities-card {
     padding-left: 0px;
   }
   .facilities p {
-    padding-left: 10px;
+    padding-left: 20px;
   }
+}
+
+/* ============================================
+   GALLERY PREVIEW
+   ============================================ */
+.gallery-text,
+.news-text {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.gallery-text h3,
+.news-text h3 {
+  color: #462a0e;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.gallery-text p {
+  color: #57381a;
+  font-size: 0.95rem;
+}
+
+.gallery-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1200px;
+  padding: 20px 16px;
+  margin: 0 auto;
+}
+
+.gallery-preview-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.25s ease;
+}
+
+.gallery-preview-grid img:hover {
+  transform: scale(1.03);
+}
+
+.gallery-cta {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+  .gallery-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   LATEST NEWS & EVENTS
+   ============================================ */
+.news-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  padding: 20px 16px 60px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+              0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.news-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.news-card-body {
+  padding: 18px 20px;
+}
+
+.news-date {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ca6b0c;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.news-card-body h3 {
+  color: #462a0e;
+  margin-bottom: 8px;
+}
+
+.news-card-body p {
+  color: #57381a;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
