@@ -191,7 +191,7 @@ nav ul a.nav-login-btn:hover {
 }
 
 
-nav {
+nav .nav1 {
   background: #57381a;
   border-bottom: 1px solid rgba(212, 175, 55, 0.18);
   position: sticky;
