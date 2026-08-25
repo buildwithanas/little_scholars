@@ -3,98 +3,356 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Scholars</title>
+  <title>About Us | Little Scholars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
   <link rel="stylesheet" href="assets/css/about.css">
   <link rel="icon" type="images/jpeg" href="assets/images/logo.png.jpeg">
 </head>
 <body>
 
-    <!-- Nav -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">
-        <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+  <!-- Nav (identical to index.html, "About" marked active) -->
+  <header>
+    <nav>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <div class="nav-logo-text"><strong>Little Scholars</strong></div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="nav-login-btn">Login</a></li>
+        </ul>
       </div>
-      <div class="nav-logo-text"><strong>Little Scholars</strong></div>
-    </a>
+    </nav>
+  </header>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <main>
 
-    <ul id="navMenu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="academics.html" class="active">Academics</a></li>
-      <li><a href="admission.html" class="active">Admission</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="news.html" class="active">News</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="login.html" class="active">Login</a></li>
+    <!-- 1. HERO -->
+    <section class="hero hero--about">
+      <!-- Replace with a real photo of the school building / pupils learning if available -->
+      <img src="assets/images/2.jpeg" alt="Little Scholars pupils and classroom">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Little Scholars</p>
+        <h1>About Us</h1>
+        <p>Learn more about our commitment to nurturing young minds and shaping future leaders.</p>
+      </div>
+    </section>
 
-    </ul>
-  </div>
-</nav>
+    <!-- 2. OUR STORY -->
+    <section class="about reveal">
+      <div class="about-img-wrapper">
+        <img src="assets/images/3.jpeg" alt="Little Scholars school building" class="about-img">
+      </div>
+      <div class="about-content">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-heading">About Little Scholar Islamic School</h2>
 
+        <p>Founded in 2005, Little Scholar Islamic School was established with a passion for providing quality education and nurturing children in a safe, supportive, and morally grounded environment. The school was officially registered and approved in 2010 and currently offers Nursery and Primary education.</p>
 
-<section class="hero">
-    <img src="assets/images/2.jpeg" alt="Little Scholar Hero">
+        <p>In 2015, our Primary section moved to its permanent site in Akuro Phase 2, providing a dedicated environment for learning and growth.</p>
 
-    <div class="hero-content">
-        <p class="hero-eyebrow">About Us</p>
+        <p>Over the years, our pupils have participated in various academic competitions and, by the grace of Allah, have achieved remarkable success. We continue to encourage every pupil to learn, compete, grow, and strive for excellence.</p>
 
-        <p>
-            Learn more about our commitment to nurturing young minds and shaping future leaders.
-        </p>
+        <p>At Little Scholar Islamic School, we combine academic excellence, good character, discipline, and Islamic values to prepare our pupils for a bright future.</p>
 
-        <div class="cta-btn">
-            <a href="contact.html" class="btn">Apply Now</a>
+        <div class="milestone-grid">
+          <div class="milestone-item">
+            <span class="milestone-year">2005</span>
+            <span class="milestone-label">School Founded</span>
+          </div>
+          <div class="milestone-item">
+            <span class="milestone-year">2010</span>
+            <span class="milestone-label">Registered &amp; Approved</span>
+          </div>
+          <div class="milestone-item">
+            <span class="milestone-year">2015</span>
+            <span class="milestone-label">Moved to Akuro Phase 2</span>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 3. MISSION & VISION -->
+    <section class="mv-section">
+      <div class="mv-grid">
+        <div class="mv-card reveal">
+          <h3>Our Mission</h3>
+          <p>To create an Islamic learning environment that promotes the development of knowledge, confidence, skills, and understanding, helping our pupils grow into happy, healthy, confident, and responsible individuals. We provide a positive learning environment where every pupil is valued and supported to achieve their potential.</p>
+        </div>
+        <div class="mv-card reveal">
+          <h3>Our Vision</h3>
+          <p>To develop pupils who demonstrate respect, integrity, resilience, and independence, preparing them to become confident and responsible future leaders.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CORE VALUES -->
+    <div class="choose-text">
+      <h3>Our Core Values</h3>
+      <p class="section-label" style="display:block; margin-top:6px;">The principles that guide our pupils, teachers, and school community.</p>
     </div>
-</section>
-  
-<section class="about">
-  <img src="assets/images/6.jpeg" alt="about-img">
-</section>
+    <div class="choose-card">
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Excellence</h3>
+        <p class="choose-p">Encouraging every pupil to strive for their best.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Discipline</h3>
+        <p class="choose-p">Building responsible habits and positive behaviour.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Integrity</h3>
+        <p class="choose-p">Teaching honesty, fairness, and strong character.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Respect</h3>
+        <p class="choose-p">Promoting kindness and respect for everyone.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Creativity</h3>
+        <p class="choose-p">Encouraging curiosity, imagination, and new ideas.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Teamwork</h3>
+        <p class="choose-p">Teaching pupils to cooperate and learn together.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Leadership</h3>
+        <p class="choose-p">Developing confidence and responsible leadership skills.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Responsibility</h3>
+        <p class="choose-p">Helping pupils understand their duties and make good choices.</p>
+      </div>
+    </div>
 
+    <!-- 5. PRINCIPAL'S WELCOME -->
+    <section class="about reveal">
+      <div class="about-img-wrapper">
+        <!-- Placeholder — replace with the principal's actual photo -->
+        <img src="assets/images/2.jpeg" alt="The Principal, Little Scholars" class="about-img principal-img">
+      </div>
+      <div class="about-content">
+        <span class="section-label">A Word From Our Principal</span>
+        <h2 class="section-heading">Welcome to Little Scholar Islamic School</h2>
 
-<div class="hero">
+        <p>On behalf of our entire school community, welcome. Whether you are a parent considering Little Scholars for your child or simply learning more about who we are, thank you for taking the time to get to know us.</p>
 
-</div>
+        <blockquote class="principal-quote">
+          We believe every child deserves an education that nurtures the mind, strengthens character, and stays rooted in strong Islamic values.
+        </blockquote>
 
+        <p>Our teachers work closely with every pupil to build confidence, curiosity, and a genuine love for learning, while daily prayers, Qur'an, and good conduct remain central to school life. We see education as a partnership — and we're grateful for the trust you place in us to help shape your child's future.</p>
 
+        <p>We warmly welcome you to visit our school, meet our teachers, and see firsthand the environment we have built for your child to learn, grow, and thrive.</p>
 
+        <p class="principal-signature">— The Principal</p>
+      </div>
+    </section>
 
+    <!-- 6. WHY PARENTS CHOOSE US -->
+    <div class="choose-text">
+      <h3>Why Parents Choose Us</h3>
+      <p class="section-label" style="display:block; margin-top:6px;">Creating an environment where every child can learn, grow, and thrive.</p>
+    </div>
+    <div class="choose-card">
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Qualified Teachers</h3>
+        <p class="choose-p">Dedicated educators committed to helping every pupil learn and succeed.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Modern Classrooms</h3>
+        <p class="choose-p">Comfortable and supportive classrooms designed for effective learning.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Child-Centered Learning</h3>
+        <p class="choose-p">Learning approaches that recognise the individual needs and abilities of every child.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Strong Moral Values</h3>
+        <p class="choose-p">Education that combines academic development with good character and Islamic values.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Safe &amp; Secure Environment</h3>
+        <p class="choose-p">A caring environment where pupils can learn, play, and grow with confidence.</p>
+      </div>
+      <div class="choose-c1 reveal">
+        <h3 class="choose-head"> Affordable Quality Education</h3>
+        <p class="choose-p">Providing quality education while keeping it accessible to families.</p>
+      </div>
+    </div>
 
+    <!-- 7. SCHOOL FACILITIES -->
+     <!--
+    <div class="facilities">
+      <h3>Our School Facilities</h3>
+      <p>We provide a safe, stimulating, and well-equipped environment to ensure every student thrives academically, physically, and socially.</p>
+    </div>
+    <div class="facilities-div">
+      <div class="facilities-card reveal">
+        <img src="assets/images/2.jpeg" alt="Smart classroom">
+        <h3>Smart Classrooms</h3>
+        <p>Modern and engaging spaces designed to support effective learning.</p>
+      </div>
+      <div class="facilities-card reveal">
+        <img src="assets/images/3.jpeg" alt="ICT laboratory">
+        <h3>ICT Laboratory</h3>
+        <p>A dedicated space where pupils develop digital skills and explore technology.</p>
+      </div>
+      <div class="facilities-card reveal">
+        <img src="assets/images/2.jpeg" alt="School library">
+        <h3>Library</h3>
+        <p>A learning space that encourages reading, research, and discovery.</p>
+      </div>
+      <div class="facilities-card reveal">
+        <img src="assets/images/3.jpeg" alt="School playground">
+        <h3>Playground</h3>
+        <p>A safe space where pupils can play, exercise, and develop social skills.</p>
+      </div>
+      <div class="facilities-card reveal">
+        <!-- Placeholder — replace with an actual photo of the school bus if available -->
+     <!--  <img src="assets/images/2.jpeg" alt="School bus">
+        <h3>School Bus</h3>
+        <p>Convenient transportation support for pupils where available.</p>
+      </div>
+      <div class="facilities-card reveal">
+        <img src="assets/images/3.jpeg" alt="Sick bay">
+        <h3>Sick Bay</h3>
+        <p>A dedicated space for basic health support and pupil wellbeing.</p>
+      </div>
+    </div>
+      -->
+    <!-- 8. MEET OUR TEAM -->
+    <div class="team-text">
+      <h3>Meet Our Team</h3>
+      <p class="section-label" style="display:block; margin-top:6px;">Dedicated educators working together to support every pupil's growth.</p>
+    </div>
+    <div class="team-grid">
+      <!-- Placeholder photos — replace with real passport-style staff photos -->
+      <div class="team-card reveal">
+        <img src="assets/images/7.jpeg" alt="Staff photo placeholder" class="team-photo">
+        <h3>Mrs Aishat</h3>
+        <p>Proprietress</p>
+      </div>
+      <div class="team-card reveal">
+        <img src="assets/images/8.jpeg" alt="Staff photo placeholder" class="team-photo">
+        <h3>Mrs Taiwo Awotubo</h3>
+        <p>Principal</p>
+      </div>
+      <div class="team-card reveal">
+        <img src="assets/images/9.jpeg" alt="Staff photo placeholder" class="team-photo">
+        <h3>Mrs Abanikanda</h3>
+        <p>Head Teacher</p>
+      </div>
+      <div class="team-card reveal">
+        <img src="assets/images/10.jpeg" alt="Staff photo placeholder" class="team-photo">
+        <h3>Mrs Okojie</h3>
+        <p>Head Teacher</p>
+      </div>
+    </div>
 
+    <!-- 9. SCHOOL TIMELINE -->
+    <div class="timeline-text">
+      <h3>Our Journey</h3>
+    </div>
+    <div class="timeline-list">
+      <div class="timeline-item reveal">
+        <span class="timeline-year">2005 — School Founded</span>
+        <p>Little Scholar Islamic School was established with a commitment to quality education.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-year">2010 — Registered &amp; Approved</span>
+        <p>The school became officially registered and approved.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-year">2015 — Permanent Primary Site</span>
+        <p>The Primary section moved to its permanent site in Akuro Phase 2.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-year">2022 — Academic Growth</span>
+        <p>Pupils continued participating in academic competitions and achieving notable success.</p>
+      </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-year">2026 — Digital School Management</span>
+        <p>The school continues to embrace technology to improve communication, learning, and school management.</p>
+      </div>
+    </div>
 
+    <!-- 10. CALL TO ACTION -->
+    <section class="cta-band reveal">
+      <h3>Give Your Child the Best Start in Life</h3>
+      <p>Join Little Scholar Islamic School and give your child an environment where learning, character, confidence, and excellence can grow together.</p>
+      <div class="cta-btn">
+        <a href="admission.html" class="btn">Apply for Admission</a>
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+    </section>
 
-<div class="about">
-  <p></p>
-</div>
-<script>
-    // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+  </main>
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
+  <!-- 11. FOOTER (identical to index.html) -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <span class="footer-brand-text">Little Scholars</span>
+        </div>
+        <p>Little Scholar Islamic School — nurturing knowledge, character, and faith since 2005.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
 
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>Akuro Phase 2, Lagos, Nigeria</li>
+          <li>+234 000 000 0000</li>
+          <li>info@littlescholars.sch</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="footerYear"></span> Little Scholar Islamic School. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/about.js"></script>
 </body>
 </html>
