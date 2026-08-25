@@ -1,161 +1,320 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #f5f1ac;
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-  }
-
-  
-  /* ============================================
-  NAVIGATION
+/* ============================================
+   ABOUT PAGE — page-specific styles
+   Reuses colors, fonts, radii and shadows already
+   established in assets/css/index.css:
+   - Brown:  #57381a (nav / dark accents)
+   - Accent: #85592e / #ca6b0c / #462a0e
+   - Cream:  #f5f1ac (page background)
+   - Cards:  #ffffff, 12px radius, soft shadow
    ============================================ */
-nav {
-  background: #57381a;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
 
-.nav-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 24px;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  min-width: 0;
-}
-
-.nav-logo-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid #8B5E3C;
-  flex-shrink: 0;
-}
-
-.nav-logo-icon img {
-  width: 96%;
-  height: 96%;
-  object-fit: cover;
-  transform: scale(1.1);
-}
-
-.nav-logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.2rem, 3vw, 1.7rem);
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-}
-
-/* Mobile menu toggle button */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 1px solid rgba(255, 254, 252, 0.932);
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  margin: 0 auto;
-  background: #fdfdfc;
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  list-style: none;
-}
-
-nav ul a {
-  position: relative;
-  text-decoration: none;
-  color: #faf9f5;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 8px 0;
-  transition: color 0.25s ease;
-}
-
-nav ul a::after {
+/* ---------- About hero: same hero, soft cream overlay ---------- */
+.hero.hero--about::before {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1px;
-  background: #8B5E3C;
-  transition: width 0.3s ease;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(245, 241, 172, 0.35) 0%, rgba(87, 56, 26, 0.55) 100%);
+  z-index: 1;
 }
 
-nav ul a:hover,
-nav ul a:focus-visible {
+.hero.hero--about .hero-content {
+  z-index: 2;
+}
+
+/* ---------- Section label (small eyebrow above headings) ---------- */
+.section-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ca6b0c;
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  color: #462a0e;
+  font-size: 1.9rem;
+  margin-bottom: 16px;
+}
+
+/* ---------- Our Story: milestone highlights ---------- */
+.milestone-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  max-width: 500px;
+}
+
+.milestone-item {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.milestone-year {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ca6b0c;
+}
+
+.milestone-label {
+  display: block;
+  font-size: 0.78rem;
+  color: #57381a;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+@media (max-width: 560px) {
+  .milestone-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+
+/* ---------- Mission & Vision ---------- */
+.mv-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px 10px;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mv-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.mv-icon {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.mv-card h3 {
+  color: #57381a;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.mv-card p {
+  color: #57381a;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ---------- Principal's Welcome ---------- */
+.principal-img {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  max-height: 380px;
+}
+
+.principal-quote {
+  font-style: italic;
+  color: #351c03;
+  border-left: 3px solid #ca6b0c;
+  padding-left: 14px;
+  margin: 16px 0;
+}
+
+.principal-signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #57381a;
+  margin-top: 10px;
+}
+
+/* ---------- Meet Our Team ---------- */
+.team-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  padding: 24px 16px 10px;
+  margin: 0 auto;
+}
+
+.team-card {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #8B5E3C;
+  margin: 0 auto 14px;
+}
+
+.team-card h3 {
+  color: #462a0e;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.team-card p {
+  color: #85592e;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Our Journey: timeline ---------- */
+.timeline-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.timeline-list {
+  max-width: 700px;
+  margin: 24px auto 10px;
+  padding: 0 16px;
+  position: relative;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #e6dfa9;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 28px 56px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ca6b0c;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #e6dfa9;
+}
+
+.timeline-year {
+  display: block;
+  font-weight: 800;
+  color: #57381a;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.timeline-item p {
+  color: #57381a;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: #57381a;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+  border-radius: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.cta-band h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.cta-band p {
+  font-size: 1rem;
+  max-width: 620px;
+  margin: 0 auto 26px;
+  line-height: 1.7;
   color: #f4f1ea;
 }
 
-nav ul a:hover::after,
-nav ul a:focus-visible::after {
-  width: 100%;
+.cta-band .cta-btn {
+  position: static;
 }
 
-@media (max-width: 780px) {
-  .nav-toggle { display: flex; }
+/* ---------- Scroll-reveal (used by about.js) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-  nav ul {
-    position: absolute;
-    top: 90%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    background: #57381a;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Responsive tweaks specific to About sections ---------- */
+@media (max-width: 768px) {
+  .cta-band {
+    padding: 40px 16px;
   }
 
-  nav ul.open {
-    max-height: 400px;
+  .cta-band h3 {
+    font-size: 1.4rem;
   }
 
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul a {
-    display: block;
-    width: 100%;
-    padding: 16px 24px;
-    border-top: 1px solid rgba(233, 182, 13, 0.08);
+  .principal-img {
+    max-height: 260px;
   }
 }
