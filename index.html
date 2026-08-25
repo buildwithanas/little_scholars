@@ -86,7 +86,7 @@
 
 
 
-<div class="about">
+<div class="about reveal">
   <div class="about-img-wrapper">
     <img src="assets/images/3.jpeg" alt="Little Scholars About" class="about-img">
   </div>
@@ -104,7 +104,7 @@
 
 <!--WHY CHOOSE US-->
 
-<div class="choose-text">
+<div class="choose-text reveal">
   <h3>Why Choose Us</h3>
 </div>
 <div class="choose-card">
@@ -140,7 +140,7 @@
   </div>
 
   <!--ACADEMIC LEVEL CARDS-->
-  <div class="levels-div">
+  <div class="levels-div reveal">
     <div class="level-card">
       <img src="assets/images/2.jpeg" alt="Nursery Section">
       <div class="level-card-body">
@@ -160,7 +160,7 @@
   </div>
 
                     <!--OUR FACILITIES-->
-  <div class="facilities">
+  <div class="facilities reveal">
     <h3>Our Facilities</h3>
     <p>We provide a safe, stimulating, and well-equipped environment to ensure every student thrives academically, physically, and socially. Such as:</p>
   </div>
@@ -199,7 +199,7 @@
   
 
   <!--GALLERY PREVIEW-->
-  <div class="gallery-text">
+  <div class="gallery-text reveal">
     <h3>Gallery</h3>
     <p>A glimpse into everyday life, learning, and celebration at Little Scholars.</p>
   </div>
@@ -218,7 +218,7 @@
   </div>
 
   <!--LATEST NEWS & EVENTS-->
-  <div class="news-text">
+  <div class="news-text reveal">
     <h3>Latest News &amp; Events</h3>
   </div>
 
@@ -253,46 +253,8 @@
   </div>
 
 
-<script>
-  const counters = document.querySelectorAll('.counter');
+<script src="assets/js/index.js"></script>
+  
 
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
-    const speed = target / 60; // Change speed here
-
-    if (count < target) {
-      counter.innerText = Math.ceil(count + speed);
-      setTimeout(updateCount, 30);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  updateCount();
-});
-
-</script>
-
-  <script>
-    // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
-
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
 </body>
 </html>
