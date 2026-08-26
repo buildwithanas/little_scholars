@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Scholars</title>
+  <title>Gallery | Little Scholars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/gallery.css">
@@ -11,55 +11,287 @@
 </head>
 <body>
 
-    <!-- Nav -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">
-        <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+  <!-- Fixed/sticky nav -->
+  <header>
+    <nav>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <div class="nav-logo-text"><strong>Little Scholars</strong></div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="nav-login-btn">Login</a></li>
+        </ul>
       </div>
-      <div class="nav-logo-text"><strong>Little Scholars</strong></div>
-    </a>
+    </nav>
+  </header>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <main>
 
-    <ul id="navMenu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="academics.html" class="active">Academics</a></li>
-      <li><a href="admission.html" class="active">Admission</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="news.html" class="active">News</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="login.html" class="active">Login</a></li>
+    <!-- 1. GALLERY HERO (no button) -->
+    <section class="hero">
+      <!-- Replace with a real photo capturing school life -->
+      <img src="assets/images/2.jpeg" alt="Little Scholars pupils">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Our Gallery</p>
+        <h1>Moments That Tell Our Story</h1>
+        <p>Take a glimpse into the learning, creativity, celebrations, and everyday experiences that make our school community special.</p>
+      </div>
+    </section>
 
-    </ul>
+    <!-- 2/3. INTRODUCTION SECTION -->
+    <section class="split-section reveal">
+      <img src="assets/images/3.jpeg" alt="Life at Little Scholars" class="split-img">
+      <div class="split-content">
+        <span class="section-label">Life at Our School</span>
+        <h2 class="section-heading">Life at Our School</h2>
+        <p>Every day at Little Scholar Islamic School is full of learning, laughter, and growth — from quiet moments of reading to lively classroom activities and school-wide celebrations. This gallery is a small window into that everyday life.</p>
+        <a href="about.html" class="btn btn-outline-dark">Explore Our School</a>
+      </div>
+    </section>
+
+    <!-- 4. GALLERY CATEGORIES -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="classroom">Classroom</button>
+      <button class="filter-btn" data-category="events">Events</button>
+      <button class="filter-btn" data-category="sports">Sports</button>
+      <button class="filter-btn" data-category="graduation">Graduation</button>
+      <button class="filter-btn" data-category="excursions">Excursions</button>
+      <button class="filter-btn" data-category="cultural">Cultural</button>
+      <button class="filter-btn" data-category="facilities">Facilities</button>
+    </div>
+
+    <!-- 5. MAIN GALLERY -->
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Replace these placeholder images with real school photos -->
+      <div class="gallery-item" data-category="classroom" data-caption="Pupils engaged in a hands-on classroom activity.">
+        <img src="assets/images/2.jpeg" alt="Classroom activity">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Classroom</span>
+          <p class="gallery-item-caption">Pupils engaged in a hands-on classroom activity.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="classroom" data-caption="A reading session building early literacy skills.">
+        <img src="assets/images/3.jpeg" alt="Reading session">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Classroom</span>
+          <p class="gallery-item-caption">A reading session building early literacy skills.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="classroom" data-caption="Pupils exploring an ICT lesson.">
+        <img src="assets/images/2.jpeg" alt="ICT lesson">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Classroom</span>
+          <p class="gallery-item-caption">Pupils exploring an ICT lesson.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="events" data-caption="Our pupils celebrating at a school event.">
+        <img src="assets/images/3.jpeg" alt="School event">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Events</span>
+          <p class="gallery-item-caption">Our pupils celebrating at a school event.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="graduation" data-caption="Graduating pupils marking the end of a milestone year.">
+        <img src="assets/images/2.jpeg" alt="Graduation ceremony">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Graduation</span>
+          <p class="gallery-item-caption">Graduating pupils marking the end of a milestone year.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="sports" data-caption="Our pupils participating in the annual sports competition.">
+        <img src="assets/images/3.jpeg" alt="Inter-house sports">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Sports</span>
+          <p class="gallery-item-caption">Our pupils participating in the annual sports competition.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="sports" data-caption="A football match during Sports Day.">
+        <img src="assets/images/2.jpeg" alt="Football match">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Sports</span>
+          <p class="gallery-item-caption">A football match during Sports Day.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="excursions" data-caption="Pupils on an educational field trip.">
+        <img src="assets/images/3.jpeg" alt="Educational excursion">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Excursions</span>
+          <p class="gallery-item-caption">Pupils on an educational field trip.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="cultural" data-caption="Pupils showcasing culture and heritage on Cultural Day.">
+        <img src="assets/images/2.jpeg" alt="Cultural Day">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Cultural</span>
+          <p class="gallery-item-caption">Pupils showcasing culture and heritage on Cultural Day.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="facilities" data-caption="A look inside one of our classrooms.">
+        <img src="assets/images/3.jpeg" alt="School classroom">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Facilities</span>
+          <p class="gallery-item-caption">A look inside one of our classrooms.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="facilities" data-caption="Pupils enjoying playtime on the playground.">
+        <img src="assets/images/2.jpeg" alt="School playground">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Facilities</span>
+          <p class="gallery-item-caption">Pupils enjoying playtime on the playground.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="events" data-caption="Parents and teachers together at a PTA event.">
+        <img src="assets/images/3.jpeg" alt="PTA event">
+        <div class="gallery-item-body">
+          <span class="gallery-item-category">Events</span>
+          <p class="gallery-item-caption">Parents and teachers together at a PTA event.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="gallery-empty" id="galleryEmpty">No photos in this category yet — check back soon.</p>
+
+    <!-- 6. CLASSROOM LEARNING -->
+    <div class="section-intro reveal">
+      <h3>Learning in Action</h3>
+      <p>Teachers guiding lessons, pupils reading, exploring mathematics, working through ICT lessons, and learning together in groups — the classroom is where it all begins.</p>
+      <button class="btn btn-outline-dark" data-filter-jump="classroom">View All Photos</button>
+    </div>
+
+    <!-- 7. SCHOOL EVENTS -->
+    <div class="section-intro reveal">
+      <h3>Memorable School Events</h3>
+      <p>From graduation and prize-giving to Cultural Day and PTA gatherings, our school calendar is full of moments worth celebrating together.</p>
+      <a href="news.html" class="btn btn-outline-dark">See More Events</a>
+    </div>
+
+    <!-- 8. SPORTS & RECREATION -->
+    <div class="section-intro reveal">
+      <h3>Sports &amp; Recreation</h3>
+      <p>Football, athletics, inter-house sports, and outdoor activities that build fitness, teamwork, and school spirit.</p>
+      <button class="btn btn-outline-dark" data-filter-jump="sports">View Sports Photos</button>
+    </div>
+
+    <!-- 9. EXCURSIONS -->
+    <div class="section-intro reveal">
+      <h3>Learning Beyond the Classroom</h3>
+      <p>Educational trips, field visits, and recreational outings that let pupils learn in a whole new setting.</p>
+      <button class="btn btn-outline-dark" data-filter-jump="excursions">View Excursion Photos</button>
+    </div>
+
+    <!-- 10. SCHOOL ENVIRONMENT -->
+    <div class="section-intro reveal">
+      <h3>Explore Our Learning Environment</h3>
+      <p>From the classrooms and library to the ICT room, playground, and assembly area, our school is built to support every part of a child's day.</p>
+      <a href="about.html" class="btn btn-outline-dark">Learn More About Our School</a>
+    </div>
+
+    <!-- 12. CTA SECTION -->
+    <section class="cta-band reveal">
+      <h3>Come and Experience Our School</h3>
+      <p>Pictures tell part of our story. Visit us and experience our learning environment for yourself.</p>
+      <div class="cta-btn">
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        <a href="admission.html" class="btn btn-outline-light">Apply for Admission</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 11. LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">&larr;</button>
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next image">&rarr;</button>
+      <img id="lightboxImg" src="" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+      <span class="lightbox-category" id="lightboxCategory"></span>
+    </div>
   </div>
-</nav>
 
-<script>
-    // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+  <!-- 13. FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <span class="footer-brand-text">Little Scholars</span>
+        </div>
+        <p>Little Scholar Islamic School — nurturing knowledge, character, and faith since 2005.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
 
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
-  
+      <div class="footer-col">
+        <h4>Portal</h4>
+        <ul class="footer-links">
+          <li><a href="login.html">Student / Staff Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>Akuro Phase 1, Ogere, Ogun State</li>
+          <li>0814 168 3297</li>
+          <li>info@schoolname.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="footerYear"></span> Little Scholar Islamic School. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/gallery.js"></script>
 </body>
 </html>
