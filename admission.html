@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Scholars</title>
+  <title>Admissions | Little Scholars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/admission.css">
@@ -11,55 +11,416 @@
 </head>
 <body>
 
-    <!-- Nav -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">
-        <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+  <!-- Fixed/sticky nav, same as the homepage -->
+  <header>
+    <nav>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <div class="nav-logo-text"><strong>Little Scholars</strong></div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html" class="active">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="nav-login-btn">Login</a></li>
+        </ul>
       </div>
-      <div class="nav-logo-text"><strong>Little Scholars</strong></div>
-    </a>
+    </nav>
+  </header>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <main>
 
-    <ul id="navMenu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="academics.html" class="active">Academics</a></li>
-      <li><a href="admission.html" class="active">Admission</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="news.html" class="active">News</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="login.html" class="active">Login</a></li>
+    <!-- 1. ADMISSION HERO -->
+    <section class="hero">
+      <!-- Replace with a real photo: happy pupils, the school entrance, or a teacher with pupils -->
+      <img src="assets/images/2.jpeg" alt="Pupils at Little Scholars">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Little Scholars</p>
+        <h1>Admissions</h1>
+        <p>Give your child a strong foundation for a bright and successful future.</p>
+        <div class="cta-btn">
+          <a href="#apply" class="btn">Apply Now</a>
+          <a href="#contact-admissions" class="btn">Contact Us</a>
+        </div>
+      </div>
+    </section>
 
+    <!-- 2. WELCOME TO OUR SCHOOL -->
+    <section class="split-section reveal">
+      <img src="assets/images/3.jpeg" alt="Little Scholars school photo" class="split-img">
+      <div class="split-content">
+        <span class="section-label">Welcome</span>
+        <h2 class="section-heading">Begin Your Child's Journey With Us</h2>
+        <p>Little Scholar Islamic School welcomes children into its Nursery and Primary programmes each academic session. We are committed to providing a supportive, safe environment where every child can learn, develop, and grow with confidence.</p>
+        <a href="#apply" class="btn btn-outline-dark">Apply Now</a>
+      </div>
+    </section>
+
+    <!-- 3. AVAILABLE CLASSES -->
+    <div class="section-intro">
+      <h3>Available Classes</h3>
+    </div>
+    <div class="class-grid">
+      <div class="class-card reveal">
+        <h3>Nursery</h3>
+        <ul>
+          <li>Creche</li>
+          <li>Kindergarten</li>
+          <li>Nursery 1</li>
+          <li>Nursery 2</li>
+        </ul>
+      </div>
+      <div class="class-card reveal">
+        <h3>Primary</h3>
+        <ul>
+          <li>Primary 1</li>
+          <li>Primary 2</li>
+          <li>Primary 3</li>
+          <li>Primary 4</li>
+          <li>Primary 5</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. ADMISSION PROCESS -->
+    <div class="section-intro">
+      <h3>Admission Process</h3>
+    </div>
+    <div class="process-list">
+      <div class="process-step reveal">
+        <div class="process-number">01</div>
+        <div class="process-step-body">
+          <h3>Submit Application</h3>
+          <p>Complete the admission application form.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-number">02</div>
+        <div class="process-step-body">
+          <h3>Application Review</h3>
+          <p>The school reviews the submitted information.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-number">03</div>
+        <div class="process-step-body">
+          <h3>Assessment / Interaction</h3>
+          <p>Where applicable, the child participates in an assessment or admission interaction.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-number">04</div>
+        <div class="process-step-body">
+          <h3>Admission Confirmation</h3>
+          <p>Successful applicants receive confirmation and information about the next steps.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. ADMISSION REQUIREMENTS -->
+    <div class="section-intro">
+      <h3>Admission Requirements</h3>
+    </div>
+    <!-- Draft list — confirm the exact requirements with the school before publishing -->
+    <ul class="checklist reveal">
+      <li>Completed admission form</li>
+      <li>Passport photographs</li>
+      <li>Birth certificate / birth record</li>
+      <li>Previous school report (for transferring pupils)</li>
     </ul>
-  </div>
-</nav>
 
-<script>
-    // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+    <!-- 6. WHY CHOOSE US -->
+    <div class="section-intro">
+      <h3>Why Choose Us?</h3>
+    </div>
+    <div class="card-grid">
+      <div class="info-card reveal">
+        <h3>Quality Education</h3>
+        <p>A strong academic foundation.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Dedicated Teachers</h3>
+        <p>Teachers committed to every child's development.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Safe Environment</h3>
+        <p>A welcoming and secure learning environment.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Character Development</h3>
+        <p>Building discipline, confidence, respect, and responsibility.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Modern Learning</h3>
+        <p>Preparing pupils for a changing world.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Holistic Development</h3>
+        <p>Supporting academic, creative, social, and physical development.</p>
+      </div>
+    </div>
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
+    <!-- 7. IMPORTANT ADMISSION INFORMATION -->
+    <div class="section-intro">
+      <h3>Important Admission Information</h3>
+    </div>
+    <!-- Admissions Status is hardcoded for now — see the comment in admission.js
+         for how this should be wired up once the admin dashboard exists -->
+    <div class="info-band reveal">
+      <div class="info-band-item">
+        <span class="info-band-label">Academic Session</span>
+        <span class="info-band-value">2026/2027</span>
+      </div>
+      <div class="info-band-item">
+        <span class="info-band-label">School Sections</span>
+        <span class="info-band-value">Nursery &amp; Primary</span>
+      </div>
+      <div class="info-band-item">
+        <span class="info-band-label">Admissions Status</span>
+        <span class="info-band-value">
+          <span class="status-badge open" id="admissionsStatus">OPEN</span>
+        </span>
+      </div>
+      <div class="info-band-item">
+        <span class="info-band-label">School Hours</span>
+        <!-- Placeholder — replace with the school's confirmed hours -->
+        <span class="info-band-value">7:00 AM – 3:00 PM</span>
+      </div>
+    </div>
 
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
-  
+    <!-- 8. ONLINE APPLICATION -->
+    <div class="section-intro" id="apply">
+      <h3>Apply Online</h3>
+      <p>Fill out the form below instead of downloading a paper form — our admissions team will be in touch with next steps.</p>
+    </div>
+    <div class="application-section">
+      <form class="application-form reveal" id="applicationForm">
+
+        <div class="form-group-title">Child Information</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="childFirstName">First Name</label>
+            <input type="text" id="childFirstName" name="childFirstName" required>
+          </div>
+          <div class="form-field">
+            <label for="childLastName">Last Name</label>
+            <input type="text" id="childLastName" name="childLastName" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="childDob">Date of Birth</label>
+            <input type="date" id="childDob" name="childDob" required>
+          </div>
+          <div class="form-field">
+            <label for="childGender">Gender</label>
+            <select id="childGender" name="childGender" required>
+              <option value="" disabled selected>Select</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="classApplying">Class Applying For</label>
+            <select id="classApplying" name="classApplying" required>
+              <option value="" disabled selected>Select a class</option>
+              <option value="nursery1">Nursery 1</option>
+              <option value="nursery2">Nursery 2</option>
+              <option value="primary1">Primary 1</option>
+              <option value="primary2">Primary 2</option>
+              <option value="primary3">Primary 3</option>
+              <option value="primary4">Primary 4</option>
+              <option value="primary5">Primary 5</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="previousSchool">Previous School (if any)</label>
+            <input type="text" id="previousSchool" name="previousSchool">
+          </div>
+        </div>
+
+        <div class="form-group-title">Parent / Guardian Information</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="parentName">Parent / Guardian Name</label>
+            <input type="text" id="parentName" name="parentName" required>
+          </div>
+          <div class="form-field">
+            <label for="parentPhone">Phone Number</label>
+            <input type="tel" id="parentPhone" name="parentPhone" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="parentEmail">Email</label>
+            <input type="email" id="parentEmail" name="parentEmail" required>
+          </div>
+          <div class="form-field">
+            <label for="parentAddress">Address</label>
+            <input type="text" id="parentAddress" name="parentAddress" required>
+          </div>
+        </div>
+
+        <div class="form-group-title">Documents</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="passportPhoto">Passport Photograph</label>
+            <input type="file" id="passportPhoto" name="passportPhoto" accept="image/*">
+          </div>
+          <div class="form-field">
+            <label for="supportingDocs">Supporting Documents (where required)</label>
+            <input type="file" id="supportingDocs" name="supportingDocs">
+          </div>
+        </div>
+        <p class="form-note">Accepted formats: JPG, PNG, PDF.</p>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+          <div class="form-success" id="formSuccess">
+            Application submitted successfully. Our admissions team will contact you with the next steps.
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- 9. FREQUENTLY ASKED QUESTIONS -->
+    <div class="section-intro">
+      <h3>Frequently Asked Questions</h3>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What classes are available?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Nursery and Primary classes are available according to the school's current admission structure.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How do I apply?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Parents can complete the online application form above or contact the school directly.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What documents are required?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>See the school's confirmed admission requirements listed above.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>When does admission close?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <!-- Placeholder — replace with the school's confirmed admission deadline -->
+          <p>Contact the school for the current admission deadline.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Can I visit the school?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <!-- Placeholder — replace with the school's confirmed visiting arrangements -->
+          <p>Contact the school to arrange a visit.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. CONTACT ADMISSIONS -->
+    <section class="cta-band reveal" id="contact-admissions">
+      <h3>Have Questions About Admission?</h3>
+      <p>Our admissions team is ready to help you through the enrollment process.</p>
+      <div class="cta-btn">
+        <!-- Placeholder contact details — replace with the school's confirmed numbers/email -->
+        <a href="tel:+2340000000000" class="btn">Call Us</a>
+        <a href="https://wa.me/2340000000000" class="btn" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="mailto:info@littlescholars.sch" class="btn">Send an Email</a>
+      </div>
+    </section>
+
+    <!-- 11. FINAL CTA -->
+    <section class="cta-band reveal">
+      <h3>Give Your Child the Right Start</h3>
+      <p>Join a learning community committed to academic excellence, character development, and the growth of every child.</p>
+      <div class="cta-btn">
+        <a href="#apply" class="btn">Apply Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <span class="footer-brand-text">Little Scholars</span>
+        </div>
+        <p>Little Scholar Islamic School — nurturing knowledge, character, and faith since 2005.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>Akuro Phase 2, Lagos, Nigeria</li>
+          <li>+234 000 000 0000</li>
+          <li>info@littlescholars.sch</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="footerYear"></span> Little Scholar Islamic School. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/admission.js"></script>
 </body>
 </html>

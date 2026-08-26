@@ -1,18 +1,19 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #f5f1ac;
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-  }
-@media (max-width: 368px) {
-    body {
-      font-size: 14px;
-    }
-  }
 
-  
-  /* ============================================
-  NAVIGATION
+body {
+  background: #f5f1ac;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+@media (max-width: 368px) {
+  body { font-size: 14px; }
+}
+
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   NAVIGATION (fixed/sticky on desktop, like the homepage)
    ============================================ */
 nav {
   background: #57381a;
@@ -53,6 +54,7 @@ nav {
   height: 96%;
   object-fit: cover;
   transform: scale(1.1);
+  margin: 0 auto;
 }
 
 .nav-logo-text {
@@ -64,7 +66,6 @@ nav {
   white-space: nowrap;
 }
 
-/* Mobile menu toggle button */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -131,7 +132,15 @@ nav ul a:focus-visible::after {
   width: 100%;
 }
 
-/* Login button treatment (spec asks for Login as a button, not a plain link) */
+nav ul a.active {
+  color: #f0c987;
+}
+
+nav ul a.active::after {
+  width: 100%;
+  background: #f0c987;
+}
+
 nav ul a.nav-login-btn {
   background: #85592e;
   padding: 8px 18px;
@@ -139,9 +148,7 @@ nav ul a.nav-login-btn {
   color: #ffffff;
 }
 
-nav ul a.nav-login-btn::after {
-  display: none;
-}
+nav ul a.nav-login-btn::after { display: none; }
 
 nav ul a.nav-login-btn:hover {
   background: #91520a;
@@ -166,13 +173,9 @@ nav ul a.nav-login-btn:hover {
     transition: max-height 0.3s ease;
   }
 
-  nav ul.open {
-    max-height: 400px;
-  }
+  nav ul.open { max-height: 500px; }
 
-  nav ul li {
-    width: 100%;
-  }
+  nav ul li { width: 100%; }
 
   nav ul a {
     display: block;
@@ -181,14 +184,12 @@ nav ul a.nav-login-btn:hover {
     border-top: 1px solid rgba(233, 182, 13, 0.08);
   }
 
-  nav ul a.nav-login-btn {
-    border-radius: 0;
-  }
+  nav ul a.nav-login-btn { border-radius: 0; }
 }
 
 
 /* ============================================
-   HERO BANNER (top image + heading)
+  HERO BANNER (top image + heading)
    ============================================ */
 
   .hero {

@@ -1,13 +1,5 @@
 /* ============================================
-   ACADEMICS PAGE — fully self-contained stylesheet
-   Does not depend on index.css or about.css.
-   Palette, fonts, radii and shadows match the rest
-   of the site so the page still looks like part of
-   the same school website:
-   - Brown:  #57381a (nav / dark accents)
-   - Accent: #85592e / #ca6b0c / #462a0e
-   - Cream:  #f5f1ac (page background)
-   - Cards:  #ffffff, 12px radius, soft shadow
+   ACADEMICS PAGE
    ============================================ */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,7 +22,8 @@ img { max-width: 100%; display: block; }
 nav {
   background: #57381a;
   border-bottom: 1px solid rgba(212, 175, 55, 0.18);
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
 }
@@ -211,19 +204,11 @@ nav ul a.nav-login-btn:hover {
 
 .hero img {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   object-fit: cover;
-  filter: brightness(60%);
+  filter: brightness(60%); 
+  
 }
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(245, 241, 172, 0.35) 0%, rgba(87, 56, 26, 0.55) 100%);
-  z-index: 1;
-}
-
 .hero-content {
   position: absolute;
   top: 45%;
@@ -234,7 +219,6 @@ nav ul a.nav-login-btn:hover {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   width: 90%;
   max-width: 1000px;
-  z-index: 2;
 }
 
 .hero-eyebrow {
