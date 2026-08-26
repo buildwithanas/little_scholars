@@ -276,7 +276,8 @@ nav ul a.nav-login-btn:hover {
   gap: 14px;
 }
 
-.btn {
+.btn,
+.button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
@@ -668,7 +669,7 @@ nav ul a.nav-login-btn:hover {
 /* ============================================
    ONLINE APPLICATION FORM
    ============================================ */
-.application-section {
+/*.application-section {
   max-width: 800px;
   margin: 0 auto;
   padding: 10px 16px 50px;
@@ -756,7 +757,7 @@ nav ul a.nav-login-btn:hover {
   text-align: center;
 }
 
-.form-success.show { display: block; }
+.form-success.show { display: block; }*/
 
 /* ============================================
    FAQ ACCORDION

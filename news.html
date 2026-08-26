@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Scholars</title>
+  <title>News & Events | Little Scholars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/news.css">
@@ -11,55 +11,333 @@
 </head>
 <body>
 
-    <!-- Nav -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">
-        <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+  <!-- Fixed/sticky nav, same as the other pages -->
+  <header>
+    <nav>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <div class="nav-logo-text"><strong>Little Scholars</strong></div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html" class="active">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="nav-login-btn">Login</a></li>
+        </ul>
       </div>
-      <div class="nav-logo-text"><strong>Little Scholars</strong></div>
-    </a>
+    </nav>
+  </header>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <main>
 
-    <ul id="navMenu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="academics.html" class="active">Academics</a></li>
-      <li><a href="admission.html" class="active">Admission</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="news.html" class="active">News</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="login.html" class="active">Login</a></li>
+    <!-- 1. NEWS HERO -->
+    <section class="hero">
+      <!-- Replace with a real photo: a school event, pupils in an activity, or a graduation/sports photo -->
+      <img src="assets/images/4.jpeg" alt="Pupils at a Little Scholars school event">
+      <div class="hero-content">
+        <p class="hero-eyebrow">School News &amp; Events</p>
+        <h1>What's Happening at Our School</h1>
+        <p>Stay informed about our latest activities, achievements, events, and important school updates.</p>
+      </div>
+    </section>
 
+    <!-- 2. FEATURED NEWS -->
+    <div class="featured-news">
+      <div class="featured-card reveal">
+        <!-- Replace with the actual featured article image -->
+        <img src="assets/images/5.jpeg" alt="Graduation ceremony at Little Scholars" class="featured-img">
+        <div class="featured-body">
+          <span class="featured-tag">Featured</span>
+          <span class="featured-date">August 22, 2026</span>
+          <h3>Graduation Ceremony</h3>
+          <p>Our pupils celebrated the end of another successful academic session with a graduation ceremony filled with pride, achievement, and joyful memories for pupils, parents, and teachers alike.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. NEWS CATEGORIES -->
+    <div class="category-filter" id="categoryFilter">
+      <button class="category-btn active" data-category="all">All</button>
+      <button class="category-btn" data-category="academic">Academic</button>
+      <button class="category-btn" data-category="events">Events</button>
+      <button class="category-btn" data-category="sports">Sports</button>
+      <button class="category-btn" data-category="achievements">Achievements</button>
+      <button class="category-btn" data-category="announcements">Announcements</button>
+    </div>
+
+    <!-- 4. LATEST NEWS -->
+    <div class="section-intro">
+      <h3>Latest News</h3>
+    </div>
+    <div class="news-grid" id="newsGrid">
+
+      <article class="news-card reveal" data-category="sports">
+        <img src="assets/images/6.jpeg" alt="Pupils at the Inter-House Sports Competition" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-category">School Event</span>
+          <span class="news-card-date">August 20, 2026</span>
+          <h3>Annual Inter-House Sports Competition</h3>
+          <p>Pupils participated in an exciting day of sporting activities, showing great teamwork and school spirit across all houses.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <article class="news-card reveal" data-category="academic">
+        <img src="assets/images/7.jpeg" alt="Pupils in a classroom activity" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-category">Academic</span>
+          <span class="news-card-date">August 14, 2026</span>
+          <h3>New Term, New Learning Goals</h3>
+          <p>Teachers introduced fresh learning objectives for the term, focusing on literacy, numeracy, and hands-on classroom activities.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <article class="news-card reveal" data-category="achievements">
+        <img src="assets/images/8.jpeg" alt="Pupils receiving an award" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-category">Achievements</span>
+          <span class="news-card-date">August 5, 2026</span>
+          <h3>Pupils Shine at Regional Quiz Competition</h3>
+          <p>A team of our Primary pupils represented the school with distinction, bringing home recognition for their hard work and preparation.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <article class="news-card reveal" data-category="events">
+        <img src="assets/images/9.jpeg" alt="Cultural day celebration" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-category">Events</span>
+          <span class="news-card-date">July 29, 2026</span>
+          <h3>Cultural Day Celebrations</h3>
+          <p>The school community came together to celebrate our rich cultural heritage through music, dance, and traditional attire.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <article class="news-card reveal" data-category="announcements">
+        <img src="assets/images/10.jpeg" alt="School announcement" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-category">Announcements</span>
+          <span class="news-card-date">July 20, 2026</span>
+          <h3>Examination Timetable Released</h3>
+          <p>The examination timetable for the current session has been released. Parents and pupils are encouraged to review it carefully.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <article class="news-card reveal" data-category="sports">
+        <img src="assets/images/11.jpeg" alt="Pupils on a nature walk" class="news-card-img">
+        <div class="news-card-body">
+          <span class="news-card-category">School Event</span>
+          <span class="news-card-date">July 10, 2026</span>
+          <h3>Nature Walk and Outdoor Learning Day</h3>
+          <p>Pupils enjoyed a day of outdoor learning, exploring nature while developing curiosity, observation, and teamwork skills.</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+    </div>
+    <p class="news-empty-state" id="newsEmptyState">No news articles found in this category yet. Please check back soon.</p>
+
+    <!-- 5. UPCOMING EVENTS -->
+    <div class="section-intro">
+      <h3>Upcoming Events</h3>
+    </div>
+    <div class="events-list">
+      <div class="event-item reveal">
+        <div class="event-date-badge">SEP<br>5</div>
+        <div class="event-item-body">
+          <h3>New Academic Session</h3>
+          <p>School resumes for the new academic session.</p>
+          <span class="event-location">📍 School Premises</span>
+        </div>
+      </div>
+      <div class="event-item reveal">
+        <div class="event-date-badge">SEP<br>18</div>
+        <div class="event-item-body">
+          <h3>Parents' Orientation</h3>
+          <p>An opportunity for parents to meet teachers and learn about the new session.</p>
+          <span class="event-location">📍 School Hall</span>
+        </div>
+      </div>
+      <div class="event-item reveal">
+        <div class="event-date-badge">OCT<br>10</div>
+        <div class="event-item-body">
+          <h3>Inter-House Sports</h3>
+          <p>Pupils compete in various sporting activities.</p>
+          <span class="event-location">📍 School Sports Field</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. SCHOOL ANNOUNCEMENTS -->
+    <div class="section-intro">
+      <h3>School Announcements</h3>
+    </div>
+    <!-- Draft announcements — confirm current details with the school before publishing -->
+    <ul class="announcement-list">
+      <li class="announcement-item reveal">
+        <span class="announcement-icon">📢</span>
+        <div class="announcement-body">
+          <h3>School Resumption</h3>
+          <p>School resumes on Monday, September 7, 2026.</p>
+          <a href="#">Read Announcement →</a>
+        </div>
+      </li>
+      <li class="announcement-item reveal">
+        <span class="announcement-icon">📢</span>
+        <div class="announcement-body">
+          <h3>Examination Timetable Released</h3>
+          <p>The examination timetable is now available. Please contact your class teacher for a copy.</p>
+          <a href="#">Read Announcement →</a>
+        </div>
+      </li>
+      <li class="announcement-item reveal">
+        <span class="announcement-icon">📢</span>
+        <div class="announcement-body">
+          <h3>PTA Meeting</h3>
+          <p>The next Parent-Teacher Association meeting will hold in the school hall. Details to follow.</p>
+          <a href="#">Read Announcement →</a>
+        </div>
+      </li>
+      <li class="announcement-item reveal">
+        <span class="announcement-icon">📢</span>
+        <div class="announcement-body">
+          <h3>School Fees Reminder</h3>
+          <p>Parents are kindly reminded to complete outstanding fee payments before the start of the new term.</p>
+          <a href="#">Read Announcement →</a>
+        </div>
+      </li>
     </ul>
-  </div>
-</nav>
 
-<script>
-    // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+    <!-- 7. ACHIEVEMENTS -->
+    <div class="section-intro">
+      <h3>Celebrating Our Achievements</h3>
+      <p>Only actual achievements confirmed by the school should be listed here.</p>
+    </div>
+    <div class="card-grid">
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🏆</div>
+        <h3>Academic Excellence</h3>
+        <p>Recognising pupils and teachers for outstanding academic performance.</p>
+      </div>
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🥇</div>
+        <h3>Competition Winners</h3>
+        <p>Celebrating pupils who represented the school at inter-school competitions.</p>
+      </div>
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🎓</div>
+        <h3>Outstanding Graduates</h3>
+        <p>Honouring graduating pupils for their dedication throughout the academic session.</p>
+      </div>
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🏅</div>
+        <h3>Sports Achievement</h3>
+        <p>Commending pupils for excellence and sportsmanship in school sporting events.</p>
+      </div>
+    </div>
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
+    <!-- 8. GALLERY PREVIEW -->
+    <div class="section-intro">
+      <h3>Moments From Our School</h3>
+    </div>
+    <div class="gallery-preview-grid">
+      <img src="assets/images/12.jpeg" alt="Moment from a school event" class="reveal">
+      <img src="assets/images/13.jpeg" alt="Moment from a school event" class="reveal">
+      <img src="assets/images/14.jpeg" alt="Moment from a school event" class="reveal">
+      <img src="assets/images/15.jpeg" alt="Moment from a school event" class="reveal">
+      <img src="assets/images/16.jpeg" alt="Moment from a school event" class="reveal">
+      <img src="assets/images/17.jpeg" alt="Moment from a school event" class="reveal">
+    </div>
+    <div class="gallery-preview-cta">
+      <a href="gallery.html" class="btn btn-outline-dark btn-small">View Full Gallery →</a>
+    </div>
 
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
-  
+    <!-- 9. NEWSLETTER / UPDATES -->
+    <div class="newsletter-band reveal">
+      <h3>Never Miss an Update</h3>
+      <p>Subscribe to receive the latest school news, events, and announcements straight to your inbox.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="newsletter-note" id="newsletterNote">Thank you for subscribing! You'll now receive our latest updates.</p>
+    </div>
+
+    <!-- 10. FINAL CTA -->
+    <section class="cta-band reveal">
+      <h3>Stay Connected With Us</h3>
+      <p>Follow our school activities and keep up with the latest news and events.</p>
+      <div class="cta-btn">
+        <a href="contact.html" class="btn">Contact Us</a>
+        <a href="#" class="btn btn-outline">Follow Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <span class="footer-brand-text">Little Scholars</span>
+        </div>
+        <p>Little Scholar Islamic School — nurturing knowledge, character, and faith since 2005.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>Akuro Phase 2, Lagos, Nigeria</li>
+          <li>+234 000 000 0000</li>
+          <li>info@littlescholars.sch</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="footerYear"></span> Little Scholar Islamic School. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/news.js"></script>
 </body>
 </html>
