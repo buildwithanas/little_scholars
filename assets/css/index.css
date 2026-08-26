@@ -13,12 +13,13 @@ body {
 img { max-width: 100%; display: block; }
 
 /* ============================================
-   NAVIGATION (fixed/sticky on desktop, like the homepage)
+   NAVIGATION (fixed on desktop, like the homepage)
    ============================================ */
 nav {
   background: #57381a;
   border-bottom: 1px solid rgba(212, 175, 55, 0.18);
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
 }

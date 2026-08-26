@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Scholars</title>
+  <title>Contact Us | Little Scholars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/contact.css">
@@ -11,55 +11,183 @@
 </head>
 <body>
 
-    <!-- Nav -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">
-        <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+  <!-- Fixed/sticky nav -->
+  <header>
+    <nav>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <div class="nav-logo-text"><strong>Little Scholars</strong></div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="login.html" class="nav-login-btn">Login</a></li>
+        </ul>
       </div>
-      <div class="nav-logo-text"><strong>Little Scholars</strong></div>
-    </a>
+    </nav>
+  </header>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <main>
 
-    <ul id="navMenu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="academics.html" class="active">Academics</a></li>
-      <li><a href="admission.html" class="active">Admission</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="news.html" class="active">News</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="login.html" class="active">Login</a></li>
+    <!-- 1. CONTACT HERO -->
+    <section class="hero">
+      <!-- Replace with a real photo of the school building, reception, or entrance -->
+      <img src="assets/images/2.jpeg" alt="Little Scholars school entrance">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Get In Touch</p>
+        <h1>We'd Love to Hear From You</h1>
+        <p>Have a question about admissions, academics, or school activities? Our team is ready to assist you.</p>
+      </div>
+    </section>
 
-    </ul>
-  </div>
-</nav>
+    <!-- 2. CONTACT INFORMATION CARDS -->
+    <div class="contact-card-grid">
+      <div class="contact-card reveal">
+        <h3>Call Us</h3>
+        <p>0814 168 3297</p>
+        <a href="tel:+2348141683297" class="btn btn-outline-dark">Call Now</a>
+      </div>
 
-<script>
-    // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+      <div class="contact-card reveal">
+        <h3>WhatsApp</h3>
+        <p>+234 805 864 0430</p>
+        <a href="https://wa.me/2348058640430" class="btn btn-outline-dark" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
+      <div class="contact-card reveal">
+        <h3>Email Us</h3>
+        <!-- Placeholder domain — replace with the school's real email address -->
+        <p>info@schoolname.com</p>
+        <a href="mailto:info@schoolname.com" class="btn btn-outline-dark">Send Email</a>
+      </div>
 
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
-  
+      <div class="contact-card reveal">
+        <h3>Visit Us</h3>
+        <p>
+          Primary: Chief Oyegunwa Farm, Akuro Phase 1, Ogere, Ogun State<br><br>
+          Nursery: Behind Milord Hotel, Ogere Remo, Ogun State
+        </p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Chief+Oyegunwa+Farm+Akuro+Phase+1+Ogere+Ogun+State"
+          class="btn btn-outline-dark" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+    </div>
+
+    <!-- 3. CONTACT LAYOUT -->
+    <div class="contact-layout reveal">
+      <img src="assets/images/3.jpeg" alt="Little Scholars school building" class="contact-layout-img">
+      <div class="contact-layout-info">
+        <h3>Reach Us Directly</h3>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">Address</span>
+          <span class="contact-info-value">
+            Primary: Chief Oyegunwa Farm, Akuro Phase 1, Ogere, Ogun State<br>
+            Nursery: Behind Milord Hotel, Ogere Remo, Ogun State
+          </span>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">Phone</span>
+          <span class="contact-info-value"><a href="tel:+2348141683297">0814 168 3297</a></span>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">WhatsApp</span>
+          <span class="contact-info-value"><a href="https://wa.me/2348058640430" target="_blank" rel="noopener">+234 805 864 0430</a></span>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-label">Email</span>
+          <!-- Placeholder domain — replace with the school's real email address -->
+          <span class="contact-info-value"><a href="mailto:info@schoolname.com">info@schoolname.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="social-section reveal">
+      <h3>Follow Our School</h3>
+      <!-- Placeholder links — replace with the school's real social profiles -->
+      <div class="social-links">
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+        <a href="#" aria-label="TikTok" target="_blank" rel="noopener">TT</a>
+      </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band reveal">
+      <h3>Ready to Give Your Child a Great Start?</h3>
+      <p>Learn more about our school or begin the admission process today.</p>
+      <div class="cta-btn">
+        <a href="admission.html" class="btn btn-primary">Apply for Admission</a>
+        <a href="tel:+2348141683297" class="btn btn-outline-light">Call Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <span class="footer-brand-text">Little Scholars</span>
+        </div>
+        <p>Little Scholar Islamic School — nurturing knowledge, character, and faith since 2005.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>Akuro Phase 2, Lagos, Nigeria</li>
+          <li>0814 168 3297</li>
+          <li>info@schoolname.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="footerYear"></span> Little Scholar Islamic School. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/contact.js"></script>
 </body>
 </html>
