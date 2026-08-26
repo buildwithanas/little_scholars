@@ -160,3 +160,318 @@ nav ul a:focus-visible::after {
     border-top: 1px solid rgba(233, 182, 13, 0.08);
   }
 }
+
+
+
+/* ============================================
+   LOGIN / STUDENT PORTAL ENTRY PAGE
+   ============================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #f5f1ac;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+@media (max-width: 368px) {
+  body { font-size: 14px; }
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; }
+
+/* ============================================
+   TOP BRAND BAR (small, links back home)
+   ============================================ */
+.brand-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 24px;
+  z-index: 10;
+}
+
+.brand-bar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-bar-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #8B5E3C;
+  flex-shrink: 0;
+}
+
+.brand-bar-icon img {
+  width: 96%;
+  height: 96%;
+  object-fit: cover;
+  transform: scale(1.1);
+  margin: 0 auto;
+}
+
+.brand-bar-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+}
+
+/* On the light (form) side the brand bar needs dark text — handled with a
+   modifier class so it stays legible on small screens where the panels stack. */
+.brand-bar.on-light .brand-bar-text { color: #57381a; }
+
+/* ============================================
+   PAGE LAYOUT — split screen
+   ============================================ */
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+/* ---------- Left: school branding panel ---------- */
+.login-brand-panel {
+  position: relative;
+  background: #57381a;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100vh;
+}
+
+.login-brand-panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(45%);
+}
+
+.login-brand-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 56px;
+  color: #fdfdfd;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.login-brand-content .brand-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f0c987;
+  margin-bottom: 14px;
+}
+
+.login-brand-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.login-brand-content p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #f4f1ea;
+}
+
+/* ---------- Right: login form panel ---------- */
+.login-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: #fffefb;
+}
+
+.login-form-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #462a0e;
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+}
+
+.login-welcome {
+  color: #57381a;
+  font-size: 0.98rem;
+  margin-bottom: 32px;
+}
+
+/* ---------- Form fields ---------- */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #57381a;
+  margin-bottom: 6px;
+}
+
+.form-field input {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid #e0d9b0;
+  border-radius: 8px;
+  background: #fffefb;
+  color: #351c03;
+  width: 100%;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: #ca6b0c;
+}
+
+.form-field input::placeholder {
+  color: #b6ac86;
+}
+
+/* Password field with show/hide toggle */
+.password-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field-wrapper input {
+  padding-right: 44px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 6px;
+  color: #85592e;
+}
+
+.password-toggle:hover { color: #57381a; }
+
+/* ---------- Submit button ---------- */
+.login-submit {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid #85592e;
+  background-color: #85592e;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+  margin-top: 6px;
+}
+
+.login-submit:hover:not(:disabled) {
+  background-color: #91520a;
+  border-color: #91520a;
+}
+
+.login-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ---------- Feedback messages ---------- */
+.login-message {
+  display: none;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.login-message.show { display: block; }
+
+.login-message.error {
+  background: #fbeaea;
+  border: 1px solid #e3b8b8;
+  color: #8a2e2e;
+}
+
+.login-message.success {
+  background: #eef6ee;
+  border: 1px solid #bfe3c2;
+  color: #2f6b3a;
+}
+
+/* ---------- Forgot password note ---------- */
+.login-help {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #85592e;
+}
+
+.login-help a {
+  color: #ca6b0c;
+  font-weight: 600;
+}
+
+.login-help a:hover { color: #91520a; }
+
+/* ============================================
+   RESPONSIVE — stack the panels on mobile
+   ============================================ */
+@media (max-width: 900px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand-panel {
+    min-height: 240px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .login-brand-content {
+    padding: 40px 24px;
+  }
+
+  .login-brand-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .login-brand-content p {
+    font-size: 1rem;
+  }
+
+  .brand-bar { display: none; }
+
+  .login-form-panel {
+    padding: 36px 20px 50px;
+  }
+}
