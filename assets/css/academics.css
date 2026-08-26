@@ -1,13 +1,31 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #f5f1ac;
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-  }
+/* ============================================
+   ACADEMICS PAGE — fully self-contained stylesheet
+   Does not depend on index.css or about.css.
+   Palette, fonts, radii and shadows match the rest
+   of the site so the page still looks like part of
+   the same school website:
+   - Brown:  #57381a (nav / dark accents)
+   - Accent: #85592e / #ca6b0c / #462a0e
+   - Cream:  #f5f1ac (page background)
+   - Cards:  #ffffff, 12px radius, soft shadow
+   ============================================ */
 
-  
-  /* ============================================
-  NAVIGATION
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #f5f1ac;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+@media (max-width: 368px) {
+  body { font-size: 14px; }
+}
+
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   NAVIGATION (sticky)
    ============================================ */
 nav {
   background: #57381a;
@@ -48,6 +66,7 @@ nav {
   height: 96%;
   object-fit: cover;
   transform: scale(1.1);
+  margin: 0 auto;
 }
 
 .nav-logo-text {
@@ -59,7 +78,6 @@ nav {
   white-space: nowrap;
 }
 
-/* Mobile menu toggle button */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -126,7 +144,30 @@ nav ul a:focus-visible::after {
   width: 100%;
 }
 
-@media (max-width: 780px) {
+nav ul a.active {
+  color: #f0c987;
+}
+
+nav ul a.active::after {
+  width: 100%;
+  background: #f0c987;
+}
+
+nav ul a.nav-login-btn {
+  background: #85592e;
+  padding: 8px 18px;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+nav ul a.nav-login-btn::after { display: none; }
+
+nav ul a.nav-login-btn:hover {
+  background: #91520a;
+  color: #ffffff;
+}
+
+@media (max-width: 960px) {
   .nav-toggle { display: flex; }
 
   nav ul {
@@ -144,13 +185,9 @@ nav ul a:focus-visible::after {
     transition: max-height 0.3s ease;
   }
 
-  nav ul.open {
-    max-height: 400px;
-  }
+  nav ul.open { max-height: 500px; }
 
-  nav ul li {
-    width: 100%;
-  }
+  nav ul li { width: 100%; }
 
   nav ul a {
     display: block;
@@ -158,4 +195,674 @@ nav ul a:focus-visible::after {
     padding: 16px 24px;
     border-top: 1px solid rgba(233, 182, 13, 0.08);
   }
+
+  nav ul a.nav-login-btn { border-radius: 0; }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(245, 241, 172, 0.35) 0%, rgba(87, 56, 26, 0.55) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fdfdfd;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  width: 90%;
+  max-width: 1000px;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f0c987;
+  margin-bottom: 14px;
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  font-weight: 100;
+  line-height: 28px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 55vh;
+    min-height: 380px;
+  }
+
+  .hero-content { top: 50%; max-width: 100%; }
+
+  .hero-eyebrow { font-size: 0.75rem; margin-bottom: 10px; }
+
+  .hero-content h1 { font-size: 1.7rem; margin-bottom: 14px; }
+
+  .hero-content p { font-size: 0.8rem; line-height: 20px; }
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.cta-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary,
+.cta-btn .btn:first-child {
+  background-color: #85592e;
+  color: #ffffff;
+  border: 2px solid #85592e;
+}
+
+.btn-primary:hover,
+.cta-btn .btn:first-child:hover {
+  background-color: #91520a;
+  border-color: #91520a;
+}
+
+.btn-outline,
+.cta-btn .btn:last-child {
+  background-color: transparent;
+  color: #57381a;
+  border: 2px solid #57381a;
+}
+
+.btn-outline:hover,
+.cta-btn .btn:last-child:hover {
+  color: #ffffff;
+  background-color: #57381a;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   SECTION HEADINGS / LABELS
+   ============================================ */
+.section-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ca6b0c;
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  color: #462a0e;
+  font-size: 1.9rem;
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 10px;
+  padding: 0 16px;
+}
+
+.section-intro h3 {
+  color: #57381a;
+  font-size: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 8px;
+}
+
+.section-intro p {
+  color: #57381a;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   TWO-COLUMN CONTENT (intro, environment)
+   ============================================ */
+.split-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.split-img {
+  width: 100%;
+  height: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.split-content p {
+  margin-bottom: 14px;
+  text-align: justify;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #351c03;
+}
+
+.trait-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px 16px;
+  margin-top: 14px;
+}
+
+.trait-list li {
+  font-size: 0.92rem;
+  color: #57381a;
+  padding-left: 16px;
+  position: relative;
+}
+
+.trait-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ca6b0c;
+}
+
+@media (max-width: 560px) {
+  .split-section { padding: 24px 16px; gap: 24px; }
+}
+
+/* ============================================
+   PROGRAMME CARDS (Nursery / Primary)
+   ============================================ */
+.programme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  padding: 10px 16px 40px;
+  margin: 0 auto;
+}
+
+.programme-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.programme-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.programme-body {
+  padding: 26px 24px;
+}
+
+.programme-body h3 {
+  color: #462a0e;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.programme-body p {
+  color: #57381a;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.programme-body h4 {
+  color: #85592e;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.programme-body ul {
+  list-style: none;
+  margin-bottom: 18px;
+}
+
+.programme-body ul li {
+  font-size: 0.9rem;
+  color: #57381a;
+  padding: 4px 0 4px 16px;
+  position: relative;
+}
+
+.programme-body ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ca6b0c;
+}
+
+/* ============================================
+   CARD GRID (subjects, teaching approach, beyond
+   academics, facilities — one reusable pattern)
+   ============================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 10px 16px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  font-size: 1.15rem;
+  color: #57381a;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 0.92rem;
+  color: #57381a;
+  line-height: 1.6;
+}
+
+.info-card.with-image { padding: 0; overflow: hidden; }
+
+.info-card.with-image img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.info-card.with-image .info-card-body { padding: 20px; }
+
+/* subject content note (draft flag, hidden styling) */
+.draft-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #85592e;
+  font-style: italic;
+  max-width: 700px;
+  margin: 0 auto 10px;
+  padding: 0 16px;
+}
+
+/* ============================================
+   ASSESSMENT SECTION
+   ============================================ */
+.assessment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  padding: 10px 16px 40px;
+  margin: 0 auto;
+}
+
+.assessment-card {
+  background: #ffffff;
+  border-left: 4px solid #ca6b0c;
+  border-radius: 8px;
+  padding: 20px 22px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.assessment-card h3 {
+  color: #462a0e;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.assessment-card p {
+  color: #57381a;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   STATS BAR (Academic Excellence)
+   ============================================ */
+.stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #57381a;
+  border: 1px solid #fff8f8;
+  border-radius: 14px;
+  margin: 10px 20px clamp(20px, 6vw, 60px);
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.stat-item {
+  flex: 1 1 140px;
+  padding: 18px 8px;
+  text-align: center;
+  border-right: 1px solid #f5f1ac;
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 800;
+  color: #ca6b0c;
+  display: block;
+}
+
+.stat-label {
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  color: #ffffff;
+  margin-top: 1px;
+}
+
+@media (max-width: 600px) {
+  .stat-item { flex: 1 1 50%; border-bottom: 1px solid #f5f1ac; padding: 12px 4px; }
+  .stat-number { font-size: 16px; }
+  .stat-item:nth-child(odd) { border-right: 1px solid #f5f1ac; }
+}
+
+/* ============================================
+   LEARNING ENVIRONMENT (wide image band)
+   ============================================ */
+.wide-image-section {
+  position: relative;
+  max-width: 1200px;
+  margin: 10px auto 40px;
+  padding: 0 20px;
+}
+
+.wide-image-section img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.wide-image-caption {
+  max-width: 720px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.wide-image-caption h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #462a0e;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.wide-image-caption p {
+  color: #57381a;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .wide-image-section img { height: 220px; }
+}
+
+/* ============================================
+   ACADEMIC JOURNEY (illustrated timeline)
+   ============================================ */
+.journey-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 16px 50px;
+}
+
+.journey-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.journey-step {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  padding: 16px 26px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  min-width: 220px;
+}
+
+.journey-step.milestone {
+  background: #57381a;
+  color: #ffffff;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.journey-step p {
+  color: #57381a;
+  font-size: 0.95rem;
+}
+
+.journey-arrow {
+  font-size: 1.4rem;
+  color: #ca6b0c;
+  line-height: 1;
+  padding: 8px 0;
+}
+
+@media (min-width: 700px) {
+  .journey-track { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+  .journey-arrow { padding: 0 12px; }
+}
+
+/* ============================================
+   CTA BAND
+   ============================================ */
+.cta-band {
+  background: #57381a;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 20px 20px 40px;
+  border-radius: 14px;
+}
+
+.cta-band h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.cta-band p {
+  font-size: 1rem;
+  max-width: 620px;
+  margin: 0 auto 8px;
+  line-height: 1.7;
+  color: #f4f1ea;
+}
+
+@media (max-width: 768px) {
+  .cta-band { padding: 40px 16px; }
+  .cta-band h3 { font-size: 1.4rem; }
+}
+
+/* ============================================
+   SITE FOOTER
+   ============================================ */
+.site-footer {
+  background: #57381a;
+  color: #f4f1ea;
+  margin-top: 0;
+  padding: 50px 24px 0;
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 34px;
+}
+
+.footer-col h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.footer-brand .nav-logo-icon { width: 48px; height: 48px; }
+
+.footer-brand-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #e9e3d3;
+}
+
+.footer-links { list-style: none; }
+
+.footer-links li { margin-bottom: 8px; }
+
+.footer-links a {
+  color: #e9e3d3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover { color: #f0c987; }
+
+.footer-contact li {
+  list-style: none;
+  font-size: 0.9rem;
+  color: #e9e3d3;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.footer-social { display: flex; gap: 10px; margin-top: 14px; }
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 241, 234, 0.35);
+  color: #f4f1ea;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-social a:hover { background: #85592e; border-color: #85592e; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(244, 241, 234, 0.15);
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.82rem;
+  color: #cbbfa1;
+}
+
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ============================================
+   SCROLL-REVEAL (used by academics.js)
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

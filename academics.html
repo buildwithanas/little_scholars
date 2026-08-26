@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Scholars</title>
+  <title>Academics | Little Scholars</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/academics.css">
@@ -11,55 +11,364 @@
 </head>
 <body>
 
-    <!-- Nav -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">
-        <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+  <!-- Sticky nav -->
+  <header>
+    <nav>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <div class="nav-logo-text"><strong>Little Scholars</strong></div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html" class="active">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="nav-login-btn">Login</a></li>
+        </ul>
       </div>
-      <div class="nav-logo-text"><strong>Little Scholars</strong></div>
-    </a>
+    </nav>
+  </header>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <main>
 
-    <ul id="navMenu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="academics.html" class="active">Academics</a></li>
-      <li><a href="admission.html" class="active">Admission</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="news.html" class="active">News</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-      <li><a href="login.html" class="active">Login</a></li>
+    <!-- 1. ACADEMIC HERO -->
+    <section class="hero">
+      <!-- Replace with a real photo: pupils learning, a teacher teaching, or an ICT/classroom activity -->
+      <img src="assets/images/2.jpeg" alt="Pupils learning at Little Scholars">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Little Scholars</p>
+        <h1>Academics</h1>
+        <p>Inspiring curiosity, developing knowledge, and preparing every child for a successful future.</p>
+      </div>
+    </section>
 
-    </ul>
-  </div>
-</nav>
+    <!-- 2. ACADEMIC INTRODUCTION -->
+    <section class="split-section reveal">
+      <img src="assets/images/3.jpeg" alt="Classroom activity" class="split-img">
+      <div class="split-content">
+        <span class="section-label">Our Approach to Learning</span>
+        <h2 class="section-heading">Building Strong Foundations for Lifelong Learning</h2>
+        <p>At Little Scholar Islamic School, we provide a balanced education that goes beyond textbooks. Our curriculum is designed to develop academic knowledge alongside critical thinking, communication, and creativity, so every pupil learns to understand the world, not just memorise it.</p>
+        <p>Alongside strong academics, we place equal weight on problem-solving, confidence, discipline, and collaboration — the everyday skills that help a child thrive both in the classroom and beyond it.</p>
+      </div>
+    </section>
 
+    <!-- 3. OUR ACADEMIC SECTIONS -->
+    <div class="section-intro">
+      <h3>Our Academic Sections</h3>
+    </div>
+    <div class="programme-grid">
+      <div class="programme-card reveal">
+        <img src="assets/images/2.jpeg" alt="Nursery pupils">
+        <div class="programme-body">
+          <h3>Nursery Programme</h3>
+          <p>Our nursery programme provides a nurturing environment where children develop essential early-learning skills through guided play, exploration, creativity, and engaging classroom activities.</p>
+          <h4>Children develop</h4>
+          <ul>
+            <li>Early literacy</li>
+            <li>Numeracy</li>
+            <li>Communication</li>
+            <li>Social skills</li>
+            <li>Creativity</li>
+            <li>Fine &amp; gross motor skills</li>
+            <li>Personal development</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Explore Nursery</a>
+        </div>
+      </div>
 
-<script>
-    // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+      <div class="programme-card reveal">
+        <img src="assets/images/3.jpeg" alt="Primary pupils">
+        <div class="programme-body">
+          <h3>Primary Programme</h3>
+          <p>Our primary programme builds strong academic foundations while encouraging pupils to think independently, solve problems, communicate effectively, and develop the confidence needed for the next stage of their education.</p>
+          <h4>Focus areas</h4>
+          <ul>
+            <li>Literacy</li>
+            <li>Mathematics</li>
+            <li>Science</li>
+            <li>ICT</li>
+            <li>Social development</li>
+            <li>Creative learning</li>
+            <li>Critical thinking</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Explore Primary</a>
+        </div>
+      </div>
+    </div>
 
-  navToggle.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
+    <!-- 4. SUBJECTS WE OFFER -->
+    <div class="section-intro">
+      <h3>Subjects We Offer</h3>
+    </div>
+    <!-- Draft content: confirm the exact subject list with the school before publishing -->
+    <p class="draft-note">Draft list — to be confirmed by the school before this page goes live.</p>
+    <div class="card-grid">
+      <div class="info-card reveal">
+        <h3>English Language</h3>
+        <p>Developing reading, writing, speaking, listening, and comprehension skills.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Mathematics</h3>
+        <p>Building numerical reasoning, problem-solving, and logical thinking.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Basic Science</h3>
+        <p>Helping pupils understand the world through observation, exploration, and experimentation.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Computer Studies / ICT</h3>
+        <p>Introducing pupils to technology and essential digital skills.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Social Studies</h3>
+        <p>Helping pupils understand society, culture, relationships, and their environment.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Islamic Studies</h3>
+        <p>Developing Islamic knowledge, values, character, and moral responsibility.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Creative Arts</h3>
+        <p>Encouraging imagination, creativity, self-expression, and practical skills.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Yoruba</h3>
+        <p>Developing language, cultural awareness, communication, and appreciation of heritage.</p>
+      </div>
+    </div>
 
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-</script>
+    <!-- 5. OUR TEACHING APPROACH -->
+    <div class="section-intro">
+      <h3>Learning Beyond the Classroom</h3>
+    </div>
+    <div class="card-grid">
+      <div class="info-card reveal">
+        <h3>Child-Centred Learning</h3>
+        <p>Lessons are designed to encourage participation, curiosity, and active learning.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Practical Learning</h3>
+        <p>Pupils are encouraged to learn through activities, demonstrations, projects, and real-world examples.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Critical Thinking</h3>
+        <p>Students are encouraged to ask questions, analyse information, and develop problem-solving skills.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Collaborative Learning</h3>
+        <p>Group activities help pupils develop communication, teamwork, and leadership skills.</p>
+      </div>
+    </div>
+
+    <!-- 6. ASSESSMENT & ACADEMIC PROGRESS -->
+    <div class="section-intro">
+      <h3>Monitoring Every Child's Progress</h3>
+      <p>We track each pupil's development through a consistent, transparent process so parents always know how their child is doing.</p>
+    </div>
+    <div class="assessment-grid">
+      <div class="assessment-card reveal">
+        <h3>Continuous Assessment</h3>
+        <p>Regular classwork, tests, exercises, and activities help teachers monitor understanding.</p>
+      </div>
+      <div class="assessment-card reveal">
+        <h3>Termly Assessment</h3>
+        <p>Pupils complete examinations and assessments at the end of each term.</p>
+      </div>
+      <div class="assessment-card reveal">
+        <h3>Individual Support</h3>
+        <p>Teachers identify areas where pupils need additional support and guidance.</p>
+      </div>
+      <div class="assessment-card reveal">
+        <h3>Progress Tracking</h3>
+        <p>Parents can stay informed about their child's academic performance.</p>
+      </div>
+    </div>
+
+    <!-- 7. ACADEMIC EXCELLENCE -->
+    <!-- Only publish figures the school can verify -->
+    <div class="stats-bar reveal">
+      <div class="stat-item">
+        <span class="stat-number">15+</span>
+        <span class="stat-label">Years of Excellence</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">500+</span>
+        <span class="stat-label">Pupils Educated</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">30+</span>
+        <span class="stat-label">Qualified Teachers</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">95%</span>
+        <span class="stat-label">Academic Achievement</span>
+      </div>
+    </div>
+
+    <!-- 8. BEYOND ACADEMICS -->
+    <div class="section-intro">
+      <h3>Beyond Academics</h3>
+    </div>
+    <div class="card-grid">
+      <div class="info-card reveal">
+        <h3>Sports</h3>
+        <p>Physical activity and team games that build fitness, discipline, and teamwork.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Creative Arts</h3>
+        <p>Drawing, craft, and creative expression that nurture imagination.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Technology</h3>
+        <p>Hands-on exposure to computers and digital tools from an early age.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Reading &amp; Literature</h3>
+        <p>Building a lifelong love of books and independent reading.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Debate &amp; Public Speaking</h3>
+        <p>Developing confidence, articulation, and critical reasoning.</p>
+      </div>
+      <div class="info-card reveal">
+        <h3>Clubs &amp; Activities</h3>
+        <p>Extracurricular groups where pupils explore interests outside the classroom.</p>
+      </div>
+    </div>
+
+    <!-- 9. LEARNING ENVIRONMENT -->
+    <div class="wide-image-section reveal">
+      <img src="assets/images/2.jpeg" alt="Little Scholars learning environment">
+      <div class="wide-image-caption">
+        <h3>A Safe Environment for Learning</h3>
+        <p>Clean classrooms, a safe environment, and supportive teachers come together with positive discipline to give every pupil a comfortable space to learn and grow.</p>
+      </div>
+    </div>
+
+    <!-- 10. ACADEMIC FACILITIES -->
+    <div class="section-intro">
+      <h3>Academic Facilities</h3>
+    </div>
+    <div class="card-grid">
+      <div class="info-card with-image reveal">
+        <img src="assets/images/3.jpeg" alt="School library">
+        <div class="info-card-body">
+          <h3>Library</h3>
+          <p>A space where pupils develop reading and research habits.</p>
+        </div>
+      </div>
+      <div class="info-card with-image reveal">
+        <img src="assets/images/2.jpeg" alt="ICT laboratory">
+        <div class="info-card-body">
+          <h3>ICT Laboratory</h3>
+          <p>Supporting digital literacy and technology education.</p>
+        </div>
+      </div>
+      <div class="info-card with-image reveal">
+        <img src="assets/images/3.jpeg" alt="Science resources">
+        <div class="info-card-body">
+          <h3>Science Resources</h3>
+          <p>Encouraging practical exploration and scientific thinking.</p>
+        </div>
+      </div>
+      <div class="info-card with-image reveal">
+        <img src="assets/images/2.jpeg" alt="Playground">
+        <div class="info-card-body">
+          <h3>Playground</h3>
+          <p>Supporting physical development and recreation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. ACADEMIC JOURNEY -->
+    <div class="section-intro">
+      <h3>Academic Journey</h3>
+    </div>
+    <div class="journey-section">
+      <div class="journey-track">
+        <div class="journey-step milestone reveal">Nursery</div>
+        <div class="journey-arrow">&#8595;</div>
+        <div class="journey-step reveal"><p>Early Learning</p></div>
+        <div class="journey-arrow">&#8595;</div>
+        <div class="journey-step milestone reveal">Primary</div>
+        <div class="journey-arrow">&#8595;</div>
+        <div class="journey-step reveal"><p>Strong Academic Foundation</p></div>
+        <div class="journey-arrow">&#8595;</div>
+        <div class="journey-step milestone reveal">Confident Learner</div>
+      </div>
+    </div>
+
+    <!-- 12. CALL TO ACTION -->
+    <section class="cta-band reveal">
+      <h3>Give Your Child a Strong Foundation for the Future</h3>
+      <p>Discover an environment where learning, character, creativity, and confidence grow together.</p>
+      <div class="cta-btn">
+        <a href="admission.html" class="btn">Apply for Admission</a>
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="nav-logo-icon">
+            <img src="assets/images/logo.png.jpeg" alt="Little Scholars logo">
+          </div>
+          <span class="footer-brand-text">Little Scholars</span>
+        </div>
+        <p>Little Scholar Islamic School — nurturing knowledge, character, and faith since 2005.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="admission.html">Admission</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>Akuro Phase 2, Lagos, Nigeria</li>
+          <li>+234 000 000 0000</li>
+          <li>info@littlescholars.sch</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="footerYear"></span> Little Scholar Islamic School. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/academics.js"></script>
 </body>
 </html>
