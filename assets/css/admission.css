@@ -266,7 +266,7 @@ nav ul a.nav-login-btn:hover {
 }
 
 /* ============================================
-   BUTTONS
+  BUTTONS
    ============================================ */
 .cta-btn {
   display: flex;
@@ -331,7 +331,7 @@ nav ul a.nav-login-btn:hover {
 }
 
 /* ============================================
-   SECTION HEADINGS / LABELS
+  SECTION HEADINGS / LABELS
    ============================================ */
 .section-label {
   display: inline-block;
@@ -381,7 +381,7 @@ nav ul a.nav-login-btn:hover {
 }
 
 /* ============================================
-   WELCOME (two-column intro)
+  WELCOME (two-column intro)
    ============================================ */
 .split-section {
   display: grid;
